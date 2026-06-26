@@ -2,17 +2,11 @@
 
 require "../vendor/autoload.php";
 
+use App\Controllers\HomeController;
 use App\Router;
 
 $router = new Router();
 
-$router->get("/", function () {
-    ob_start();
+$router->get("/", [HomeController::class, "index"]);
 
-    echo "Hello, world!<br>";
-    echo "Teste de router...";
-
-    return ob_get_contents();
-});
-
-$router->dispatch($_SERVER["REQUEST_URI"], $_SERVER["REQUEST_METHOD"]);
+echo $router->dispatch($_SERVER["REQUEST_URI"], $_SERVER["REQUEST_METHOD"]);
