@@ -1,0 +1,16 @@
+{
+  "name": "yuriteixeirac/clarim-diario",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Yuri Teixeira",
+      "email": "yuriteixeirac@proton.me"
+    }
+  ],
+  "require": {}
+}
