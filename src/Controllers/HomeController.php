@@ -8,8 +8,8 @@ class HomeController
 {
     public function index(): string
     {
-        return view("main", [
-            "title" => "lalala",
+        return view("home", [
+            "titulo" => "lalala",
         ]);
     }
 }
