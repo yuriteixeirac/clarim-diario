@@ -9,7 +9,7 @@ class HomeController
     public function index(): string
     {
         return view("home", [
-            "titulo" => "lalala",
+            "titulo" => "home",
         ]);
     }
 }

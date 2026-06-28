@@ -1,40 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
 * {
     padding: 0;
     margin: 0;
 }
 
 body {
+    font-family: "Ubuntu";
     min-height: 100vh;
 }
 
 header {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 4rem;
+    justify-content: space-between;
+    margin: 1rem 1.5rem;
+    padding: 0 0 1rem 1rem;
+    border-bottom: 1px solid black;
 }
 
-nav > ul {
-    display: flex;
-    list-style: none;
-}
-
-nav > ul > li {
-    padding: 0 3rem;
+header > a {
+    text-decoration: none;
+    color: black;
 }
 
 footer {
-    text-align: center;
-    position: sticky;
+    position: absolute;
     top: 100%;
-}
-
-#home-container {
-    display: flex;
-    gap: 12px;
-}
-
-aside,
-main {
-    border: 2px solid black;
 }

@@ -1,11 +1,9 @@
 <header>
-    <h1>Clarim Diário</h1>
+    <a href="/">
+        <h1>clarim diario</h1>
+    </a>
 
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/">Postagens</a></li>
-            <li><a href="/">Mídias</a></li>
-        </ul>
-    </nav>
+    <a href="https://github.com/yuriteixeirac">
+        <img src="/static/imgs/github.svg" alt="Ícone do GitHub" width="35">
+    </a>
 </header>
