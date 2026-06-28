@@ -19,7 +19,7 @@ class Router
         $this->routes["POST"][$uri] = $route;
     }
 
-    public function dispatch(string $uri, string $method): string
+    public function dispatch(string $uri, string $method)
     {
         $callback = $this->routes[$method][$uri] ?? null;
 

@@ -49,3 +49,9 @@ nav > ul {
     padding: 1rem;
     gap: 8px;
 }
+
+#login-form > .field {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+}
