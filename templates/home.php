@@ -1,1 +1,2 @@
-<h2>HOME</h2>
+<h2>home</h2>
+<p>essa é a home do blog</p>

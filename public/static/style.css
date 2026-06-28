@@ -18,12 +18,34 @@ header {
     border-bottom: 1px solid black;
 }
 
-header > a {
+a {
     text-decoration: none;
     color: black;
 }
 
-footer {
-    position: absolute;
-    top: 100%;
+#content {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 0 1.5rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+nav {
+    border: 1px solid black;
+    font-size: 1.5rem;
+}
+
+nav > ul {
+    display: flex;
+    padding-right: 3.5rem;
+    flex-direction: column;
+    list-style: none;
+    padding: 1rem;
+    gap: 8px;
 }
