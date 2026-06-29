@@ -34,6 +34,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    width: 100%;
 }
 
 nav {
@@ -54,4 +55,32 @@ nav > ul {
     display: flex;
     justify-content: space-between;
     gap: 18px;
+}
+
+article {
+    width: 90%;
+    padding: 12px;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+#row {
+    display: flex;
+    justify-content: space-between;
+}
+
+#midias {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+#midias > img {
+    border: 2px solid black;
+}
+
+@media only screen and (max-width: 600px) {
+    #content {
+        flex-direction: column;
+    }
 }

@@ -1,6 +1,6 @@
 <header>
     <a href="/">
-        <h1>clarim diario</h1>
+        <h1>prikito blog</h1>
     </a>
 
     <a href="https://github.com/yuriteixeirac">

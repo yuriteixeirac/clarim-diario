@@ -8,7 +8,7 @@ class LoginController
 {
     public function login()
     {
-        return view("login", [
+        return view("auth/login", [
             "titulo" => "login",
         ]);
     }

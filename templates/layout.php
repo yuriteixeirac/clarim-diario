@@ -3,11 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title><?php echo $titulo; ?> | clarim diário</title>
+	<title><?php echo $titulo; ?> | prikito blog</title>
 	<link rel="stylesheet" href="/static/style/style.css">
 </head>
 <body>
-    <?php include "partials/header.php"; ?>
+    <?php
+    include "partials/header.php";
+    session_start();
+    ?>
 
     <div id="content">
         <aside>

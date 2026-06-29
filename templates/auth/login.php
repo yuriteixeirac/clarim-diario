@@ -1,5 +1,6 @@
 <?php
 use App\Config\Database;
+use App\Models\Usuario;
 
 session_start();
 
@@ -11,10 +12,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     );
 
     $stmt->execute(["username" => $_POST["username"]]);
-    $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+    $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    $usuario = new Usuario(
+        $resultado["id"],
+        $resultado["username"],
+        $resultado["password"],
+    );
 
     if ($usuario && password_verify($_POST["password"], $usuario["password"])) {
-        $_SESSION["usuario_id"] = $usuario["id"];
+        $_SESSION["usuario_id"] = $usuario->getId();
+        $_SESSION["usuario_username"] = $usuario->getUsername();
 
         header("Location: /");
         exit();
