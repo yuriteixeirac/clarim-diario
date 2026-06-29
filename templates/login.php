@@ -1,3 +1,29 @@
+<?php
+use App\Config\Database;
+
+session_start();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $pdo = Database::getConnection();
+
+    $stmt = $pdo->prepare(
+        "SELECT id, password FROM usuario WHERE username = :username",
+    );
+
+    $stmt->execute(["username" => $_POST["username"]]);
+    $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($usuario && password_verify($_POST["password"], $usuario["password"])) {
+        $_SESSION["usuario_id"] = $usuario["id"];
+
+        header("Location: /");
+        exit();
+    } else {
+        echo "not ok cabra";
+    }
+}
+?>
+
 <form action="" method="post" id="login-form">
     <div class="field">
         <label for="username">Username</label>
@@ -23,24 +49,3 @@
     }
   }
 </script>
-
-<?php
-use App\Config\Database;
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $pdo = Database::getConnection();
-
-    $stmt = $pdo->prepare(
-        "SELECT id, password FROM usuario WHERE username = :username",
-    );
-
-    $stmt->execute(["username" => $_POST["username"]]);
-    $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    if ($usuario && password_verify($_POST["password"], $usuario["password"])) {
-        echo "ok cabra";
-    } else {
-        echo "not ok cabra";
-    }
-}
-
